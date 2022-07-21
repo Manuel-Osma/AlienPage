@@ -1,0 +1,15 @@
+<dx-scheduler
+  id="scheduler"
+  [dataSource]="appointments"
+  textExpr="Titulo"
+  allDayExpr="dayLong"
+  recurrenceRuleExpr="recurrence"
+  [views]="view"
+  currentView="month"
+  [adaptivityEnabled]="true"
+  timeZone="America/Europe"
+>
+  <dxo-editing [allowTimeZoneEditing]="true" [allowDragging]="false">
+
+  </dxo-editing>
+</dx-scheduler>

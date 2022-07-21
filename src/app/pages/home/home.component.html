@@ -1,0 +1,69 @@
+<img
+  class="logos-container"
+  src="../../../assets/images/evertec-small.png"
+  alt="logo"
+/>
+<p>Continuara...........</p>
+
+  <dx-popover
+  target=".logos-container"
+  showEvent="dxhoverstart"
+  hideEvent="dxhoverend"
+  [width]="280"
+  [showTitle]="true"
+  title="👽Lugares a Visitar"
+  [showCloseButton]="true"
+  [height]="200"
+  [shading]="true"
+  shadingColor="rgba(0,0,0,0.2)"
+  position="top"
+>
+  <div *dxTemplate="let data of 'content'">
+    <p>
+      Estos son algunos de los lugares que debo visitar para verificar el estado
+      del personal
+    </p>
+  </div>
+</dx-popover>
+
+<dx-gallery  [dataSource]="galleryDataSource" [height]="500"> </dx-gallery>
+<dx-popup
+  contentTemplate="popup-content"
+  [(visible)]="isVisible"
+  [hideOnOutsideClick]="true"
+  [showTitle]="true"
+  title=" 📑 Informacion"
+  [showCloseButton]="true"
+>
+  <div *dxTemplate="let data of 'popup-content'">
+    <img id="image" src="../../../assets/images/evertec-small.png" alt="" />
+    <dx-popover  target="#image"
+      showEvent="dxhoverstart"
+      hideEvent="dxhoverend"
+      [showTitle]="true"
+      title="Informacion 👨‍💻"
+      >
+      <div *dxTemplate="let data of 'content'">
+        <p>esta informacion esta filtrada por la empresa </p>
+      </div>
+    </dx-popover>
+    <p>
+      Este es un sitio creado por alguien, un incognito para robar todo tipo de
+      informacion la cual me beneficia
+    </p>
+    <p>
+      para saber mas acerca de que trata la pagina dale click al logo de EVERTEC
+    </p>
+    <h2>ɪɴꜰᴏʀᴍᴀᴄɪᴏɴ ꜰɪʟᴛʀᴀᴅᴀ 👇🏻</h2>
+    <p>
+      Somos una compañía líder de tecnología y transacciones electrónicas, con
+      sede en San Juan, Puerto Rico. Contamos con presencia en 26 países de
+      América Latina y el Caribe, con servicios en tres segmentos principales:
+      adquisición de comerciantes, procesamiento de pagos y soluciones de
+      negocio. Somos dueños y operadores de la red de débito más grande del
+      Caribe.
+    </p>
+  </div>
+</dx-popup>
+
+

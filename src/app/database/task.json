@@ -1,0 +1,61 @@
+
+{
+  "value": [
+     { "Tareas_id":1,
+      "asignada_a": "alien",
+      "tarea_owner_id":1,
+      "tarea_para": "Se debe hacer antes de este mes",
+      "descripcion": "terminar la tarea rapido",
+      "Inicio_tarea": "2014-05-10T00:00:00",
+      "Fin_tarea": "2014-05-15T00:00:00",
+      "estado_tarea": "progreso",
+      "Prioridad": 2,
+      "recordatorio": "2022-05-10T00:00:00"
+    },
+    { "Tareas_id":2,
+      "asignada_a": "alien",
+      "tarea_owner_id":2,
+      "tarea_para": "Se debe terminar antes del año 2022",
+      "descripcion": "terminar si o si",
+      "Inicio_tarea": "2022-05-10T00:00:00",
+      "Fin_tarea": "2022-05-15T00:00:00",
+      "estado_tarea": "no iniciado",
+      "Prioridad": 1,
+      "recordatorio": "2022-05-10T00:00:00"
+    },
+    { "Tareas_id":3,
+      "asignada_a": "alien o hacker",
+      "tarea_owner_id":3,
+      "tarea_para": "Alien",
+      "descripcion": "terminar si o si Tambien la puede hacer el hacker",
+      "Inicio_tarea": "2022-05-10T00:00:00",
+      "Fin_tarea": "2022-07-15T00:00:00",
+      "estado_tarea": "no iniciado",
+      "Prioridad": 3,
+      "recordatorio": "2022-03-10T00:00:00"
+    },
+    { "Tareas_id":4,
+      "asignada_a": "alien | incognito",
+      "tarea_owner_id":4,
+      "tarea_para": "robar",
+      "descripcion": "robar informacion necesaria para seguir con el proyecto",
+      "Inicio_tarea": "2021-05-10T00:00:00",
+      "Fin_tarea": "2022-07-15T00:00:00",
+      "estado_tarea": "en progreso",
+      "Prioridad": 4,
+      "recordatorio": "2021-03-10T00:00:00"
+    }
+    ,
+    { "Tareas_id":5,
+      "asignada_a": "alien | incognito | hacker",
+      "tarea_owner_id":5,
+      "tarea_para": "All",
+      "descripcion": "necesitamos robar toda la informacion necesaria",
+      "Inicio_tarea": "2021-05-10T00:00:00",
+      "Fin_tarea": "2022-07-15T00:00:00",
+      "estado_tarea": "en progreso",
+      "Prioridad": 1,
+      "recordatorio": "2021-03-10T00:00:00"
+    }
+  ]
+}

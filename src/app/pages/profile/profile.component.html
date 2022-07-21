@@ -1,0 +1,17 @@
+<h2 class="content-block">Profile</h2>
+
+<div class="content-block dx-card responsive-paddings">
+  <div class="form-avatar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Alien01.svg/1707px-Alien01.svg.png"/>
+  </div>
+  <span>{{employee.Notes}}</span>
+</div>
+
+<div class="content-block dx-card responsive-paddings">
+  <dx-form id="form"
+    [formData]="employee"
+    labelLocation="top"
+    [colCountByScreen]="colCountByScreen"
+  >
+  </dx-form>
+</div>
