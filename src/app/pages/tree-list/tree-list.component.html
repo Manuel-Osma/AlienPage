@@ -1,0 +1,40 @@
+<h2 class="titulo">Agregar un Alien 👽</h2>
+<hr />
+
+<dx-tree-list
+  id="treeList"
+  [rootValue]="1"
+  keyExpr="ID"
+  parentIdExpr="HeadID"
+  [autoExpandAll]="true"
+  [dataSource]="empleados"
+>
+  <dxi-column dataField="FullName">
+    <dxi-validation-rule type="required"></dxi-validation-rule
+  ></dxi-column>
+  <dxi-column dataField="Country">
+    <dxi-validation-rule type="required"></dxi-validation-rule
+  ></dxi-column>
+  <dxi-column dataField="City">
+    <dxi-validation-rule type="required"></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="State">
+    <dxi-validation-rule type="required"></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="Email">
+    <dxi-validation-rule type="required"></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="MobilePhone">
+    <dxi-validation-rule type="required"></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="isHackerOrAlien">
+    <dxi-validation-rule type="required"></dxi-validation-rule>
+  </dxi-column>
+
+  <dxo-editing
+    [allowDeleting]="true"
+    [allowUpdating]="true"
+    [allowAdding]="true"
+  >
+  </dxo-editing>
+</dx-tree-list>

@@ -17,15 +17,22 @@ import {
   DxBoxModule,
   DxSchedulerModule,
   DxPopoverModule,
-  DxPopupModule
+  DxPopupModule,
+  DxTreeListModule
 } from 'devextreme-angular';
 import { SchedulerComponent } from './pages/scheduler/scheduler.component';
+import { TreeListComponent } from './pages/tree-list/tree-list.component';
 
 const routes: Routes = [
   {
     path: 'tasks',
     component: TasksComponent,
     canActivate: [AuthGuardService],
+  },
+  {
+    path:'tree',
+    component: TreeListComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path:'scheduler',
@@ -77,10 +84,11 @@ const routes: Routes = [
     DxGalleryModule,
     DxPopupModule,
     DxBoxModule,
+    DxTreeListModule,
     DxSchedulerModule
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
-  declarations: [HomeComponent, ProfileComponent, TasksComponent, SchedulerComponent],
+  declarations: [HomeComponent, ProfileComponent, TasksComponent, SchedulerComponent,TreeListComponent],
 })
 export class AppRoutingModule {}

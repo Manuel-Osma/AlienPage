@@ -22,6 +22,12 @@ export const navigation = [
         text:"Calendario",
         icon:'event',
         path:'/scheduler'
+      },
+      {
+        text:'agregar',
+        icon: 'add',
+        path: '/tree'
+
       }
     ]
   }
