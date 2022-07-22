@@ -15,17 +15,22 @@
 
 <div id="container">
   <div id="buttons">
-    <dx-button text="mostrar mensajes" (onClick)="showMessageCustom"> </dx-button>
+    <dx-button text="mostrar mensajes" (onClick)="(showMessageCustom())">
+    </dx-button>
     <dx-toast
       [(visible)]="isVisibleToast"
       type="info"
       message="tienes un nuevo mensaje"
     >
-    <dxo-position
-                my="bottom"
-                at="bottom"
-                of="#container">
-            </dxo-position>
+      <dxo-position my="bottom" at="bottom" of="#container"> </dxo-position>
     </dx-toast>
   </div>
 </div>
+
+<!-- JSon Data -->
+
+<dx-tag-box
+  dataSource="https://jsonplaceholder.typicode.com/users"
+  displayExpr="email"
+>
+</dx-tag-box>

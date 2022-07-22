@@ -13,6 +13,7 @@ import { TasksComponent } from './pages/tasks/tasks.component';
 import {
   DxDataGridModule,
   DxFormModule,
+  DxTagBoxModule,
   DxGalleryModule,
   DxBoxModule,
   DxMapModule,
@@ -24,13 +25,17 @@ import {
   DxLoadPanelModule,
   DxSpeedDialActionModule,
   DxTabPanelModule,
-  DxToastModule
+  DxToastModule,
+  DxValidatorModule,
+  DxTextBoxModule,
+  DxValidationGroupModule
 } from 'devextreme-angular';
 import { SchedulerComponent } from './pages/scheduler/scheduler.component';
 import { TreeListComponent } from './pages/tree-list/tree-list.component';
 import { MapComponent } from './pages/map/map.component';
 import { LoadPanelComponent } from './pages/load-panel/load-panel.component';
 import { FormComponent } from './pages/form/form.component';
+import { ValidatorComponent } from './pages/validator/validator.component';
 
 const routes: Routes = [
   {
@@ -67,6 +72,11 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     canActivate: [AuthGuardService],
+  },
+  {
+    path:'validator',
+    component:ValidatorComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'home',
@@ -115,7 +125,11 @@ const routes: Routes = [
     DxLoadPanelModule,
     DxButtonModule,
     DxTabPanelModule,
-    DxSpeedDialActionModule
+    DxSpeedDialActionModule,
+    DxTagBoxModule,
+    DxValidationGroupModule,
+    DxValidatorModule,
+    DxTextBoxModule
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
@@ -128,6 +142,8 @@ const routes: Routes = [
     TreeListComponent,
     LoadPanelComponent,
     FormComponent,
+    ValidatorComponent,
+
 
   ],
 })

@@ -1,0 +1,19 @@
+<dx-validation-group name="loginGroup" #targetGroup >
+<dx-text-box [(value)]="login" placeholder="Login">
+  <dx-validator>
+    <dxi-validation-rule type="required"> </dxi-validation-rule>
+    <dxi-validation-rule
+      type="pattern"
+      message='no puedes usar esos signos'
+      pattern="^[a-zA-Z]+$"
+    >
+    </dxi-validation-rule>
+  </dx-validator>
+</dx-text-box>
+<dx-text-box [(value)]="password" placeholder="Contraseña" >
+  <dxi-validation-rule type="required">
+
+  </dxi-validation-rule>
+</dx-text-box>
+</dx-validation-group>
+<dx-button text="Sign in" stylingMode="outlined" type="success" (onClick)="validateGroup()"></dx-button>

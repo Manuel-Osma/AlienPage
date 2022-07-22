@@ -49,6 +49,11 @@ export const navigation = [
         text:'Panel de carga',
         icon:'revert',
         path:'/panel'
+      },
+      {
+        text:'validaciones',
+        icon:'check',
+        path:'/validator'
       }
     ]
   }

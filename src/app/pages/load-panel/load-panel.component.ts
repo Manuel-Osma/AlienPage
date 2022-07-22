@@ -26,7 +26,7 @@ export class LoadPanelComponent   {
         of:"container"
       }
     },
-      this.types[Math.floor(Math.random()*3)],
+      this.types[Math.floor(Math.random()*4)],
       500
     )
   }
