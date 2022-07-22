@@ -1,0 +1,31 @@
+<dx-load-panel
+  [hideOnOutsideClick]="true"
+  [(visible)]="isVisiblePanel"
+  [indicatorSrc]="indicador"
+  [height]="300"
+  [width]="500"
+  [message]="message"
+  shadingColor="rgba(0,0,0,0.2)"
+>
+</dx-load-panel>
+
+<dx-button text="mostrar panel" (onClick)="isVisiblePanel = true"> </dx-button>
+
+<!-- toast -->
+
+<div id="container">
+  <div id="buttons">
+    <dx-button text="mostrar mensajes" (onClick)="showMessageCustom"> </dx-button>
+    <dx-toast
+      [(visible)]="isVisibleToast"
+      type="info"
+      message="tienes un nuevo mensaje"
+    >
+    <dxo-position
+                my="bottom"
+                at="bottom"
+                of="#container">
+            </dxo-position>
+    </dx-toast>
+  </div>
+</div>

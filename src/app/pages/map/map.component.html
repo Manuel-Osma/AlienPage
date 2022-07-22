@@ -1,0 +1,16 @@
+<dx-map
+  type="hybrid"
+  provider="bing"
+  [controls]="true"
+  [zoom]="10"
+  width="100%"
+  [markers]="mapMakers"
+  height="600px"
+  [routes]="mapRoutes"
+>
+
+<button text="Agregar una ruta" (onclick)="addRoute"></button>
+<button text="Eliminar ruta" (onclick)="removeRoutes"></button>
+
+
+</dx-map>

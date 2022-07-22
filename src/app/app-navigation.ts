@@ -28,6 +28,27 @@ export const navigation = [
         icon: 'add',
         path: '/tree'
 
+      },
+      {
+        text:'Formulario',
+        icon:'edittableheader',
+        path:'/form'
+      }
+    ]
+  },
+  {
+    text:'Mapa',
+    icon:'map',
+    path:'/map'
+  },
+  {
+    text:'Mis Componentes',
+    icon:'folder',
+    items:[
+      {
+        text:'Panel de carga',
+        icon:'revert',
+        path:'/panel'
       }
     ]
   }

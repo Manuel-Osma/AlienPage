@@ -15,13 +15,22 @@ import {
   DxFormModule,
   DxGalleryModule,
   DxBoxModule,
+  DxMapModule,
+  DxButtonModule,
   DxSchedulerModule,
   DxPopoverModule,
   DxPopupModule,
-  DxTreeListModule
+  DxTreeListModule,
+  DxLoadPanelModule,
+  DxSpeedDialActionModule,
+  DxTabPanelModule,
+  DxToastModule
 } from 'devextreme-angular';
 import { SchedulerComponent } from './pages/scheduler/scheduler.component';
 import { TreeListComponent } from './pages/tree-list/tree-list.component';
+import { MapComponent } from './pages/map/map.component';
+import { LoadPanelComponent } from './pages/load-panel/load-panel.component';
+import { FormComponent } from './pages/form/form.component';
 
 const routes: Routes = [
   {
@@ -30,14 +39,29 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path:'tree',
+    path:'panel',
+    component:LoadPanelComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path:'form',
+    component:FormComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path: 'tree',
     component: TreeListComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path:'map',
+    component:MapComponent,
     canActivate: [AuthGuardService]
   },
   {
-    path:'scheduler',
-    component:SchedulerComponent,
-    canActivate: [AuthGuardService]
+    path: 'scheduler',
+    component: SchedulerComponent,
+    canActivate: [AuthGuardService],
   },
   {
     path: 'profile',
@@ -81,14 +105,30 @@ const routes: Routes = [
     DxDataGridModule,
     DxFormModule,
     DxPopoverModule,
+    DxMapModule,
+    DxToastModule,
     DxGalleryModule,
     DxPopupModule,
     DxBoxModule,
     DxTreeListModule,
-    DxSchedulerModule
+    DxSchedulerModule,
+    DxLoadPanelModule,
+    DxButtonModule,
+    DxTabPanelModule,
+    DxSpeedDialActionModule
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
-  declarations: [HomeComponent, ProfileComponent, TasksComponent, SchedulerComponent,TreeListComponent],
+  declarations: [
+    HomeComponent,
+    MapComponent,
+    ProfileComponent,
+    TasksComponent,
+    SchedulerComponent,
+    TreeListComponent,
+    LoadPanelComponent,
+    FormComponent,
+
+  ],
 })
 export class AppRoutingModule {}

@@ -1,0 +1,26 @@
+<dx-form id="form" [formData]="empleado" [colCount]="2" (submit)="handleSubmit($event)">
+  <dxi-item itemType="group" caption="Informacion personal">
+    <dxi-item dataField="FullName"></dxi-item>
+    <dxi-item dataField="Country"></dxi-item>
+    <dxi-item dataField="City">
+    </dxi-item>
+    <dxi-item dataField="birthDay" [editorOptions]="birthDay"></dxi-item>
+  </dxi-item>
+
+  <dxi-item itemType="group" caption="Contacto">
+    <dxi-item itemType="tabbed">
+      <dxo-tab-panel-options [height]="260">
+      </dxo-tab-panel-options>
+      <dxi-tab title="Contactos">
+        <dxi-item dataField="Email"></dxi-item>
+        <dxi-item dataField="MobilePhone"></dxi-item>
+      </dxi-tab>
+      <dxi-tab title="Notas">
+        <dxi-item dataField="notes" [colSpan]="2"></dxi-item>
+      </dxi-tab>
+    </dxi-item>
+  </dxi-item>
+  <dxi-item itemType="button" [buttonOptions]="submitButtom">
+
+  </dxi-item>
+</dx-form>
