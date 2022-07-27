@@ -8,6 +8,8 @@ import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
 import { ValidatorComponent } from './pages/validator/validator.component';
+import { PaletteComponent } from './pages/palette/palette.component';
+import { HTMLeditorComponent } from './pages/htmleditor/htmleditor.component';
 
 @NgModule({
   declarations: [

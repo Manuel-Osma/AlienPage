@@ -28,7 +28,11 @@ import {
   DxToastModule,
   DxValidatorModule,
   DxTextBoxModule,
-  DxValidationGroupModule
+  DxValidationGroupModule,
+  DxCircularGaugeModule,
+  DxHtmlEditorModule,
+  DxCheckBoxModule,
+  DxSelectBoxModule
 } from 'devextreme-angular';
 import { SchedulerComponent } from './pages/scheduler/scheduler.component';
 import { TreeListComponent } from './pages/tree-list/tree-list.component';
@@ -36,6 +40,8 @@ import { MapComponent } from './pages/map/map.component';
 import { LoadPanelComponent } from './pages/load-panel/load-panel.component';
 import { FormComponent } from './pages/form/form.component';
 import { ValidatorComponent } from './pages/validator/validator.component';
+import { PaletteComponent } from './pages/palette/palette.component';
+import { HTMLeditorComponent } from './pages/htmleditor/htmleditor.component';
 
 const routes: Routes = [
   {
@@ -69,6 +75,11 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
+    path:'palette',
+    component: PaletteComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
     path: 'profile',
     component: ProfileComponent,
     canActivate: [AuthGuardService],
@@ -87,6 +98,11 @@ const routes: Routes = [
     path: 'login-form',
     component: LoginFormComponent,
     canActivate: [AuthGuardService],
+  },
+  {
+    path:'editor',
+    component:HTMLeditorComponent,
+    canActivate:[AuthGuardService]
   },
   {
     path: 'reset-password',
@@ -129,7 +145,11 @@ const routes: Routes = [
     DxTagBoxModule,
     DxValidationGroupModule,
     DxValidatorModule,
-    DxTextBoxModule
+    DxCircularGaugeModule,
+    DxTextBoxModule,
+    DxHtmlEditorModule,
+    DxCheckBoxModule,
+    DxSelectBoxModule,
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
@@ -143,8 +163,8 @@ const routes: Routes = [
     LoadPanelComponent,
     FormComponent,
     ValidatorComponent,
-
-
+    PaletteComponent,
+    HTMLeditorComponent
   ],
 })
 export class AppRoutingModule {}

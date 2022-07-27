@@ -1,0 +1,19 @@
+<dx-circular-gauge id="gauge" [value]="Velocidad">
+  <dxo-scale  [startValue]="1" [endValue]="180" [tickInterval]="10">
+    <dxo-label [useRangeColors]="true"></dxo-label>
+  </dxo-scale>
+  <dxo-range-container palette="pastel">
+    <dxi-range [startValue]="50" [endValue]="80"></dxi-range>
+    <dxi-range [startValue]="80" [endValue]="120"></dxi-range>
+    <dxi-range [startValue]="120" [endValue]="180"></dxi-range>
+  </dxo-range-container>
+  <dxo-export [enabled]="true"></dxo-export>
+  <dxo-title text="Velocimetro de nave">
+    <dxo-font size="25"></dxo-font>
+  </dxo-title>
+</dx-circular-gauge>
+<div class="btn">
+  <dx-button text="+" type="success" (onclick)="velocidad()"></dx-button>
+</div>
+
+

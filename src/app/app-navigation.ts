@@ -56,5 +56,15 @@ export const navigation = [
         path:'/validator'
       }
     ]
+  },
+  {
+    text:'Palette',
+    icon:'source',
+    path:'/palette'
+  },
+  {
+    text:'html editor',
+    icon:'codeblock',
+    path:'/editor'
   }
 ];

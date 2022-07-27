@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from 'src/app/interfaces/Empleados.interface';
+import notify from 'devextreme/ui/notify';
 
 @Component({
   selector: 'app-form',
@@ -31,6 +32,10 @@ export class FormComponent   {
  console.log("sirve");
 
  e.preventDefault();
+ }
+
+ submit(){
+  notify("Enviado","success")
  }
 
 
